@@ -4,7 +4,12 @@ const cluster = require('cluster')
 const os = require('os')
 const numCPUs = os.cpus().length
 
+
+
 const PORT = process.env.PORT || 5000
+
+
+const values = require('./values/values')
 
 // Multi-process to utilize all CPU cores.
 if (cluster.isMaster) {

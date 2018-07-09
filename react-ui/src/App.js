@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Value from './components/Value/Value'
 import Form from './components/Form/Form'
-import Teacher from './assets/images/teacher.jpeg'
+import Teacher from './images/teacher.jpeg'
 import './App.css'
 
 class App extends Component {

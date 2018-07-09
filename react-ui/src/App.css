@@ -34,7 +34,7 @@ body {
   color: white;
   font-family: var(--ubuntu);
   font-size: 18px;
-  background: url('../images/linen.png') top left repeat, radial-gradient(circle, var(--gray), var(--darkgray));
+  background: url('./images/linen.png') top left repeat, radial-gradient(circle, var(--gray), var(--darkgray));
 }
 
 h1,

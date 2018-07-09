@@ -1,0 +1,47 @@
+.was-validated .form-control:valid ~ .invalid-feedback {
+	display: none;
+}
+
+@media screen and (min-width: 0em) {
+	#plane img {
+		width: 2em;
+		height: 2em;
+	}
+
+	#thanks {
+		font-family: var(--gabriela);
+		font-size: 1.5em;
+		color: white;
+		animation-delay: 0.5s;
+	}
+
+	#plane,
+	#thanks {
+		position: relative;
+		opacity: 0;
+		animation-duration: 2s;
+		text-align: center;
+	}
+
+	.plane-and-simple {
+		position: relative;
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+/*laptop and up LG*/
+@media screen and (max-width: 118em) and (min-width: 80em) {
+	#plane,
+	#thanks {
+	}
+}
+
+/*big screens XL*/
+@media screen and (min-width: 80em) {
+	.plane-and-simple {
+		position: relative;
+		width: 100%;
+		margin: 0 auto;
+	}
+}

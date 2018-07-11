@@ -44,6 +44,31 @@ if (cluster.isMaster) {
     response.sendFile(path.resolve(__dirname, '../react-ui/build', 'index.html'))
   })
 
+  app.post('/api/signup',urlencode, function(request, response) {
+  console.log(request.body)
+    var newLadybyte = request.body
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    if (
+      !newLadybyte.email ||
+      !newLadybyte.name ||
+      !re.test(newLadybyte.email.toLowerCase())
+    ) {
+      response.sendStatus(400)
+      return false
+    }
+    console.log(newLadybyte)
+    client.hset(
+      'ladybytes-emails',
+      newLadybyte.name,
+      newLadybyte.email,
+      function(error) {
+        if (error) throw error
+
+        response.status(201).json(newLadybyte.name)
+      }
+    )
+  })
+
   app.listen(PORT, function() {
     console.error(`Node cluster worker ${process.pid}: listening on port ${PORT}`)
   })

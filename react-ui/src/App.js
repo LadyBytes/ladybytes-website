@@ -109,7 +109,7 @@ class App extends Component {
                   Manager for 5 years. I taught coding as a teaching assistant and am excited to pick it up again.
                   <br />
                   <br />
-                  It's freaking hard it can be to be a woman in this field, but there's power in numbers. My plan is to
+                  It's freaking hard to be a woman in this field, but there's power in numbers. My plan is to
                   increase these numbers.
                 </p>
                 <h4>Why is it free-ish?</h4>

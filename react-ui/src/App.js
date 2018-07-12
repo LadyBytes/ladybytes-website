@@ -10,7 +10,7 @@ class App extends Component {
     this.state = {
       message: null,
       fetching: true,
-      username: null,
+      // username: null,
       values: null,
     }
   }
@@ -36,9 +36,9 @@ class App extends Component {
         })
       })
 
-    fetch('/api/getUsername')
-      .then(res => res.json())
-      .then(user => this.setState({ username: user.username }))
+    // fetch('/api/getUsername')
+    //   .then(res => res.json())
+    //   .then(user => this.setState({ username: user.username }))
 
     fetch('/api/getValues')
       .then(res => res.json())

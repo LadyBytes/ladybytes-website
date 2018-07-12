@@ -2,19 +2,20 @@ import React, { Component } from 'react'
 import $ from 'jquery'
 import './form.css'
 import './plane.css'
+import Plane from './paper-plane.svg'
 // TODO validated: Plane and stuff
 // after that: validated && success + validated && fail "Mind trying again? Or just email me directly!"
 // pass buttons as children props, change them with success or error
 
 export default class Form extends Component {
 	state = {
-		isValidated: false
+		isValidated: false,
 	}
 
 	constructor(props) {
 		super()
 		this.state = {
-			success: false
+			success: false,
 		}
 
 		// This binding is necessary to make `this` work in the callback
@@ -24,19 +25,23 @@ export default class Form extends Component {
 		// handle state on input change
 	}
 	componentWillUpdate() {
-		$('#plane')
-			.addClass('animated fadeInUp')
-			.animate({ opacity: 1 }, 2000)
+		setTimeout(function() {
+			$('#thanks')
+				.addClass('animated zoomIn')
+				.animate({ opacity: 1 }, 800)
+			$('#plane')
+				.addClass('animated fadeInUp')
+				.animate({ opacity: 1 }, 2000)
 
-		$('#thanks')
-			.addClass('animated zoomIn')
-			.animate({ opacity: 1 }, 2000)
-		setTimeout(function() {
-			$('#plane').removeClass('fadeInUp')
-		}, 3000)
-		setTimeout(function() {
-			$('#plane').addClass('zoomOutRight')
-		}, 1700)
+			// setTimeout(function() {
+			// 	$('#plane').removeClass('fadeInUp')
+			// }, 3000)
+
+		}, 500)
+		// setTimeout(function() {
+		// 		$('#plane').addClass('animated zoomOutRight')
+		// 	}, 3000)
+
 	}
 
 	validate = () => {
@@ -76,14 +81,13 @@ export default class Form extends Component {
 		const name = target.name
 
 		this.setState({
-			[name]: value
+			[name]: value,
 		})
 	}
 
 	handleSubmit(event) {
 		event.preventDefault()
-		$('.server-error').css('visibility', 'hidden')
-		console.log(this.state)
+		console.log(this.state + 'hallo')
 		// ?if (this.validate()) {
 		if (this.validate()) {
 			$.ajax({
@@ -91,14 +95,14 @@ export default class Form extends Component {
 				url: '/api/signup',
 				data: {
 					name: this.state.name,
-					email: this.state.email
+					email: this.state.email,
 				},
 				success: function(data) {
 					$('.get-out').addClass('animated fadeOutUp')
 
 					setTimeout(
 						function() {
-							$('.get-out-hide').css('visibility', 'hidden')
+							// $('.get-out-hide').css('visibility', 'hidden')
 							this.setState({ success: true })
 						}.bind(this),
 						1000
@@ -108,7 +112,7 @@ export default class Form extends Component {
 					$('#newsletter-signup-form-button').addClass('animated shake')
 					const elem = this.formEl[2]
 					$('.server-error').css('visibility', 'visible')
-				}.bind(this)
+				}.bind(this),
 			})
 		}
 		this.formEl.reset()
@@ -144,7 +148,6 @@ export default class Form extends Component {
 					>
 						<div>
 							<input
-								
 								onChange={this.handleChange}
 								required={true}
 								id="newsletter-signup-form-name"
@@ -157,7 +160,6 @@ export default class Form extends Component {
 						</div>
 						<div>
 							<input
-								
 								onChange={this.handleChange}
 								required={true}
 								id="newsletter-signup-form-email"
@@ -186,12 +188,9 @@ export default class Form extends Component {
 				<div id="newsletter-signup-form">
 					<div className="plane-and-simple">
 						<div id="plane">
-							<img
-								src="assets/images/paper-plane.svg"
-								alt="email paper-plane icon"
-							/>
+							<img src={Plane} alt="email paper-plane icon" />
 						</div>
-						<div id="thanks">Thanks</div>
+						<div id="thanks">`Thanks, {this.name}`</div>
 					</div>
 				</div>
 			)

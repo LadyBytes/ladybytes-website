@@ -12,14 +12,19 @@
 		font-family: var(--gabriela);
 		font-size: 1.5em;
 		color: white;
-		animation-delay: 0.5s;
+		/* animation-delay: 0.5s; */
 	}
 
 	#plane,
 	#thanks {
-		position: relative;
+	/* 	-webkit-transition: 0.5s;
+		-moz-transition: 0.5s;
+		-o-transition: 0.5s;
+		transition: 0.5s; */
 		opacity: 0;
-		animation-duration: 2s;
+		/* visibility: hidden; */
+		position: relative;
+		/* animation-duration: 2s; */
 		text-align: center;
 	}
 
@@ -32,9 +37,6 @@
 
 /*laptop and up LG*/
 @media screen and (max-width: 118em) and (min-width: 80em) {
-	#plane,
-	#thanks {
-	}
 }
 
 /*big screens XL*/

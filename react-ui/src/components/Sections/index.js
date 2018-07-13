@@ -19,7 +19,7 @@
 // }
 
 import Hero from './Hero'
+import Teacher from './Teacher'
+import Signup from './Signup'
 
-export {
-  Hero
-}
+export { Hero, Teacher, Signup }

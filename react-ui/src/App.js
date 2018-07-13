@@ -3,10 +3,9 @@ import en from './translations/en.json'
 import { renderToStaticMarkup } from 'react-dom/server'
 import { withLocalize, Translate } from 'react-localize-redux'
 import Form from './components/Form/Form'
-import Teacher from './images/teacher.jpeg'
 import './App.css'
 
-import { Hero } from './components/Sections/'
+import { Hero, Teacher, Signup } from './components/Sections/'
 // import TimingExample from './components/spring_animations/timing/'
 
 class App extends Component {
@@ -95,39 +94,8 @@ class App extends Component {
           </header>
 
           <Hero />
-          <section id="teacher-section">
-            <div className="l-box-lrg">
-              <h4>Who's teaching?</h4>
-              <p>
-                I'm Lisa. I have a degree in Computer Science and have been working as a Developer and IT Project
-                Manager for 5 years. I taught coding as a teaching assistant and am excited to pick it up again.
-                <br />
-                <br />
-                It's freaking hard to be a woman in this field, but there's power in numbers. My plan is to increase
-                these numbers.
-              </p>
-              <h4>Why is it free-ish?</h4>
-              <p>
-                Everyone benefits from having a basic understanding of coding - and everyone should be able to afford
-                that. At the end of each class, just throw in however much you can or want to. Think Yoga To The People
-                with less sweat.
-              </p>
-            </div>
-            <div className="l-box-lrg">
-              <img className="teacher" src={Teacher} alt="Lisa Wagner" />
-            </div>
-          </section>
-          <section id="newsletter-section">
-            <div className="text">
-              <p>
-                Leave your email and I'll reach out! We have weekly group sessions at{' '}
-                <a target="_blank" href="https://goo.gl/maps/SC7MmKwxifL2">
-                  Cafe Beit in Williamsburg
-                </a>, but I also do private lessons for special people.
-              </p>
-            </div>
-            <Form />
-          </section>
+          <Teacher />
+          <Signup />
           <footer>
             <p>* if you identify as a woman, you're in.</p>
           </footer>

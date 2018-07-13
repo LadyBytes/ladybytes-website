@@ -27,21 +27,21 @@ export default class Form extends Component {
 	componentWillUpdate() {
 		setTimeout(function() {
 			$('#thanks')
-				.addClass('animated zoomIn')
-				.animate({ opacity: 1 }, 800)
-			$('#plane')
-				.addClass('animated fadeInUp')
-				.animate({ opacity: 1 }, 2000)
+				.addClass('animated jackInTheBox')
+				.animate({ opacity: 1 }, 400)
+			// $('#plane')
+			// 	.addClass('animated fadeInUp')
+			// 	.animate({ opacity: 1 }, 2000)
 
 			// setTimeout(function() {
 			// 	$('#plane').removeClass('fadeInUp')
 			// }, 3000)
 
-		}, 500)
+		}, 200)
 		// setTimeout(function() {
 		// 		$('#plane').addClass('animated zoomOutRight')
 		// 	}, 3000)
-
+console.log(this.state.name)
 	}
 
 	validate = () => {
@@ -87,7 +87,7 @@ export default class Form extends Component {
 
 	handleSubmit(event) {
 		event.preventDefault()
-		console.log(this.state + 'hallo')
+		console.log(this.state.name + 'hallo')
 		// ?if (this.validate()) {
 		if (this.validate()) {
 			$.ajax({
@@ -187,10 +187,10 @@ export default class Form extends Component {
 			return (
 				<div id="newsletter-signup-form">
 					<div className="plane-and-simple">
-						<div id="plane">
+						{/*<div id="plane">
 							<img src={Plane} alt="email paper-plane icon" />
-						</div>
-						<div id="thanks">`Thanks, {this.name}`</div>
+						</div>*/}
+						<div id="thanks">Thanks, {this.state.name}!</div>
 					</div>
 				</div>
 			)

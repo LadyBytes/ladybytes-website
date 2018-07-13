@@ -1,5 +1,11 @@
 # create-react-app with a Node server on Heroku
 
+Thanks to: 
+https://github.com/mars/heroku-cra-node.git
+https://github.com/crsandeep/simple-react-full-stack
+
+
+
 A minimal example of using a Node backend (server for API, proxy, & routing) with a [React frontend](https://github.com/facebookincubator/create-react-app).
 
 To deploy a frontend-only React app, use the static-site optimized  

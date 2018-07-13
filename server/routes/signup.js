@@ -1,8 +1,8 @@
 var signup = require('express').Router()
 var bodyParser = require('body-parser')
 var urlencode = bodyParser.urlencoded({ extended: false })
-var transporter = require('./mailer/mailer.js')
 var client = require('./db/client.js')
+var transporter = require('./mailer/mailer.js')
 
 signup.post('/', urlencode, function(request, response) {
   var newLadybyte = request.body

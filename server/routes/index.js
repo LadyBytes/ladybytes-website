@@ -1,5 +1,5 @@
 var routes = require('express').Router();
-var values = require('../values/values')
+// var values = require('../values/values')
 
 var signup = require('./signup.js');
 
@@ -12,7 +12,7 @@ routes.get('/api', (req, res) => {
   res.status(200).json({ message: 'Connected!' });
 });
 
-routes.get('/api/getValues', (req, res) => res.json(values))
+// routes.get('/api/getValues', (req, res) => res.json(values))
 
 
 

@@ -29,7 +29,13 @@
     },
     "free": {
       "headline": ["Why is it free-ish?"],
-      "body": [" Everyone benefits from having a basic understanding of coding - and everyone should be able to afford that. At the end of each class, just throw in however much you can or want to. Think Yoga To The People with less sweat."]
+      "body": [
+        " Everyone benefits from having a basic understanding of coding - and everyone should be able to afford that. At the end of each class, just throw in however much you can or want to. Think Yoga To The People with less sweat."
+      ]
     }
+  },
+
+  "footer": {
+    "body": ["* if you identify as a woman, you're in."]
   }
 }

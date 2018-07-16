@@ -41,7 +41,6 @@ export default class Form extends Component {
 		// setTimeout(function() {
 		// 		$('#plane').addClass('animated zoomOutRight')
 		// 	}, 3000)
-console.log(this.state.name)
 	}
 
 	validate = () => {

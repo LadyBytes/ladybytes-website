@@ -36,7 +36,7 @@ import './App.css'
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Parallax } from 'react-spring'
+import { Parallax, Spring } from 'react-spring'
 
 import { Footer, Hero, Teacher, Signup } from './components'
 
@@ -46,7 +46,10 @@ class App extends React.Component {
     this.props.initialize({
       languages: [{ name: 'English', code: 'en' }],
       translation: en,
-      options: { renderToStaticMarkup },
+      options: {
+        renderToStaticMarkup,
+        renderInnerHtml: true,
+      },
     })
   }
 
@@ -55,6 +58,7 @@ class App extends React.Component {
       <div>
         <div className="main">
           <Parallax ref="parallax" pages={3}>
+          {/*<Parallax.Layer offset={-3} speed={-1} > Back to top </Parallax.Layer>*/}
             <Parallax.Layer offset={0} speed={1} />
             <Parallax.Layer offset={1.1} speed={1} />
             <Parallax.Layer offset={2.2} speed={1} style={{}} />
@@ -63,19 +67,15 @@ class App extends React.Component {
               <Hero parallax={this.refs.parallax} />
             </Parallax.Layer>
 
-            <Parallax.Layer
-              offset={1.1}
-              speed={0.4}
-              className="teacher-layer"
-              onClick={() => this.refs.parallax.scrollTo(2.4)}
-            >
+            <Parallax.Layer offset={1.1} speed={0.4} className="teacher-layer">
               <Teacher />
             </Parallax.Layer>
 
-            <Parallax.Layer offset={2} speed={0.5} onClick={() => this.refs.parallax.scrollTo(0)}>
+            <Parallax.Layer offset={2} speed={0.5}>
               <Signup />
             </Parallax.Layer>
-            <Parallax.Layer offset={2.85} speed={0.3} onClick={() => this.refs.parallax.scrollTo(0)}>
+
+            <Parallax.Layer offset={2.85} speed={0.3}>
               <Footer />
             </Parallax.Layer>
           </Parallax>

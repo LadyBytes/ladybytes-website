@@ -1,18 +1,14 @@
 {
-  "movie": {
-    "title": ["Jurassic Park", "Le Parc jurassique"]
-  },
-
   "slogan": ["A women*-only coding class."],
 
   "values": {
     "skill-value": {
       "slogan": ["Skills that last"],
-      "body": ["We'll design, build and host a website you get to keep.\nI promise they won't all look the same."]
+      "body": ["We'll design, build and host a website you get to keep.<br/>I promise they won't all look the same."]
     },
     "experience-value": {
       "slogan": ["No experience needed"],
-      "body": ["Coding can feel intimidating - but as long as you know how to copy&paste, you'll do great."]
+      "body": ["Coding can feel intimidating - but as long as you know how to copy&paste, you'll do great. "]
     },
     "donation-value": {
       "slogan": ["Donation based"],
@@ -24,7 +20,7 @@
     "who": {
       "headline": ["Who's teaching?"],
       "body": [
-        "I'm Lisa. I have a degree in Computer Science and have been working as a Developer and IT Project Manager for 5 years. I taught coding as a teaching assistant and am excited to pick it up again.\n\n It's freaking hard to be a woman in this field, but there's power in numbers. My plan is to increase these numbers."
+        "I'm Lisa. I have a degree in Computer Science and have been working as a Developer and IT Project Manager for 5 years. I taught coding as a teaching assistant and am excited to pick it up again.<br/><br/> It's freaking hard to be a woman in this field, but there's power in numbers. My plan is to increase these numbers."
       ]
     },
     "free": {
@@ -37,5 +33,9 @@
 
   "footer": {
     "body": ["* if you identify as a woman, you're in."]
+  },
+
+  "cta": {
+    "value": ["<br/>Try it out right here."]
   }
 }

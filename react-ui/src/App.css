@@ -209,6 +209,17 @@ section#hero-section #values .value .value-text {
   margin: 1em;
 }
 
+section#hero-section #values .value .value-text .value-cta {
+  cursor: pointer;
+  font-weight: bold;
+  /* color: var(--yellow); */
+  }
+section#hero-section #values .value .value-text .value-cta:hover{
+  
+  color: var(--yellow);
+  }
+
+
 section#hero-section #values .value h2 {
   color: var(--yellow);
   text-align: center;
@@ -240,7 +251,11 @@ section#hero-section #values .value .value-text:hover {
 
 @media screen and (min-width: 48em) {
   section#hero-section #ladybytes span.ladybytes {
-    font-size: 9em;
+    font-size: 11em;
+  }
+
+  section#hero-section #ladybytes #slogan h2 {
+    font-size: 1.5em;
   }
   section#hero-section #values {
     grid-template: 'skill experience donation';
@@ -253,15 +268,18 @@ section#hero-section #values .value .value-text:hover {
 
 @media screen and (min-width: 80em) {
   section#hero-section #ladybytes span.ladybytes {
-    font-size: 11em;
+    font-size: 13em;
+  }
+
+  section#hero-section #ladybytes #slogan h2 {
+    font-size: 1.5em;
   }
   section#hero-section #values .value {
-    width: 60%;
+    width: 70%;
   }
 }
 
-
-.teacher-layer{
+.teacher-layer {
   border-top: solid 1px white;
   border-bottom: solid 1px white;
   background: var(--yellow);
@@ -269,7 +287,7 @@ section#hero-section #values .value .value-text:hover {
 
 section#teacher-section {
   min-height: 95vh;
-  
+
   color: var(--darkgray);
 
   display: grid;
@@ -279,17 +297,16 @@ section#teacher-section {
   align-items: center;
 }
 
-section#teacher-section p{
-font-size: 1.2em;
-  }
-  section#teacher-section h4{
-font-size: 1.3em;
-  }
-
+section#teacher-section p {
+  font-size: 1.2em;
+}
+section#teacher-section h4 {
+  font-size: 1.3em;
+}
 
 section#teacher-section img.teacher {
-  max-height: 250px;
-  max-width: 250px;
+  max-height: 200px;
+  max-width: 200px;
   margin: 0 auto;
   display: block;
 
@@ -297,16 +314,20 @@ section#teacher-section img.teacher {
   border: solid 1px white;
 }
 
-
-
+@media screen and (min-width: 35.5em) {
+  section#teacher-section img.teacher {
+    max-height: 300px;
+    max-width: 300px;
+  }
+}
 @media screen and (min-width: 48em) {
   section#teacher-section {
     grid-template: 'text image'/ 1.5fr 1fr;
   }
 
-  section#teacher-section img.teacher{
-     max-height: 500px;
-  max-width: 500px;
+  section#teacher-section img.teacher {
+    max-height: 500px;
+    max-width: 500px;
   }
 }
 
@@ -321,9 +342,9 @@ section#newsletter-section {
   width: 70%;
   text-align: justify;
 }
-#newsletter-section .text p{
-font-size: 1.2em;
-  }
+#newsletter-section .text p {
+  font-size: 1.2em;
+}
 #newsletter-signup-form {
   grid-area: form;
 }
@@ -461,7 +482,6 @@ footer p {
 .is-center {
   text-align: center;
 }
-
 
 /*big screens XL*/
 @media screen and (min-width: 80em) {

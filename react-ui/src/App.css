@@ -260,11 +260,16 @@ section#hero-section #values .value .value-text:hover {
   }
 }
 
-section#teacher-section {
-  min-height: 95vh;
+
+.teacher-layer{
   border-top: solid 1px white;
   border-bottom: solid 1px white;
   background: var(--yellow);
+}
+
+section#teacher-section {
+  min-height: 95vh;
+  
   color: var(--darkgray);
 
   display: grid;
@@ -434,6 +439,10 @@ footer {
   min-height: 7em;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(243, 243, 243, 0));
   grid-area: footer;
+  /* position: absolute; */
+  /* bottom: 0; */
+  padding-bottom: 1em;
+  width: 100%;
 }
 
 footer p {

@@ -8,7 +8,7 @@ function createMarkup(icon) {
 
 
 const Value = ({ id, icon }) => (
-  <div id={id} className=" value animated fadeInUp">
+  <div id={id} className=" value">
     <div className="value-text">
       <h2 aria-hidden="true">
         {icon ? <div dangerouslySetInnerHTML={createMarkup(icon)} /> : <img src={Heart} alt="heart" />}

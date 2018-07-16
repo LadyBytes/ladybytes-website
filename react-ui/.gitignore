@@ -14,5 +14,4 @@ build
 .env
 npm-debug.log
 
-
-spring_animations*
+*spring_animations*

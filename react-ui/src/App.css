@@ -301,7 +301,7 @@ section#playground-section {
   border-radius: 5px;
   background-color: #000;
   color: #fff;
-  margin: 3em;
+  /* margin: 3em; */
   width: 20em;
   height: 15em;
   grid-area: playground;

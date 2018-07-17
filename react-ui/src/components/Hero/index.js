@@ -50,7 +50,7 @@ export class Hero extends Component {
           />
         </div>
 
-        {this.state.showPlayground && <Playground />}
+        {<Playground show={this.state.showPlayground}/>}
       </section>
     )
   }

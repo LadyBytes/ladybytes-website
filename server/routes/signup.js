@@ -20,7 +20,7 @@ signup.post('/', urlencode, function(request, response) {
   // send email to me and them
   let mailOptions = {
     from: process.env.GMAIL_USER, // sender address
-    to: (process.env.ENV = 'staging') ? newLadybyte.email : process.env.GMAIL_USER, // list of receivers
+    to: (process.env.ENV = 'production') ? newLadybyte.email : process.env.GMAIL_USER, // list of receivers
     bcc: process.env.GMAIL_USER,
     subject: 'Welcome to LadyBytes!', // Subject line
     text: `You just signed up for Ladybytes.io. Great call! \n I will reach out to you shortly to get you all caught up. \n\n Have a lovely day. \n Lisa Wagner `,

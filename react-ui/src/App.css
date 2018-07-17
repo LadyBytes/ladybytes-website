@@ -73,11 +73,12 @@ p {
 .main {
   overflow-x: auto;
   display: grid;
-  grid-template-rows: repeat(5, auto);
+  grid-template-rows: repeat(6, auto);
   grid-row-gap: 2em;
   grid-template-areas:
     'header'
     'hero'
+    'playground'
     'teacher'
     'newsletter'
     'footer';
@@ -259,6 +260,7 @@ section#hero-section #values .value .value-text:hover {
   }
   section#hero-section #values {
     grid-template: 'skill experience donation';
+    grid-auto-columns: 33.3%;
   }
 
   section#hero-section #values .value {

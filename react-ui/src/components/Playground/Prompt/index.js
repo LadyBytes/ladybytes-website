@@ -30,10 +30,6 @@ export default class Prompt extends Component {
 
   handleClassChange(event) {
     event.preventDefault()
-    // hide keyboard on mobile
-     setTimeout(() => {
-      document.getElementById('playground.values-animation').blur();
-    }, 20);
     console.log(this.state)
     document.getElementById('values').scrollIntoView()
     

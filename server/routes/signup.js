@@ -16,11 +16,13 @@ signup.post('/', urlencode, function(request, response) {
     if (error) throw error
     response.status(201).json(newLadybyte.name)
   })
+  console.log(process.env.ENV)
 
+  let recipient = process.env.ENV === 'production' ? newLadybyte.email : process.env.GMAIL_USER
   // send email to me and them
   let mailOptions = {
     from: process.env.GMAIL_USER, // sender address
-    to: (process.env.ENV = 'production') ? newLadybyte.email : process.env.GMAIL_USER, // list of receivers
+    to: recipient,
     bcc: process.env.GMAIL_USER,
     subject: 'Welcome to LadyBytes!', // Subject line
     text: `You just signed up for Ladybytes.io - great call! \n I will reach out to you shortly to get you started. \n\n Have a lovely day, \n Lisa Wagner `,
@@ -31,7 +33,7 @@ signup.post('/', urlencode, function(request, response) {
     if (error) {
       return console.log(error)
     }
-    console.log('Message sent: %s', info.messageId)
+    console.log('Message sent: %s', info.to)
   })
 })
 

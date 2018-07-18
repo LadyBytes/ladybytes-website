@@ -41,6 +41,12 @@
     }
   },
 
+  "signup": {
+    "body": [
+      "Leave your email and I'll reach out! We have weekly group sessions at <a target='_blank' href='https://goo.gl/maps/SC7MmKwxifL2'> Cafe Beit in Williamsburg</a>, but I also do private lessons for special people."
+    ]
+  },
+
   "footer": {
     "body": ["* if you identify as a woman, you're in."]
   },

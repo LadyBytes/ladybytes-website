@@ -2,10 +2,7 @@ import React, { Component } from 'react'
 import $ from 'jquery'
 import './form.css'
 import './plane.css'
-import Plane from './paper-plane.svg'
-// TODO validated: Plane and stuff
-// after that: validated && success + validated && fail "Mind trying again? Or just email me directly!"
-// pass buttons as children props, change them with success or error
+// import Plane from './paper-plane.svg'
 
 export default class Form extends Component {
 	state = {
@@ -21,8 +18,6 @@ export default class Form extends Component {
 		// This binding is necessary to make `this` work in the callback
 		this.handleSubmit = this.handleSubmit.bind(this)
 		this.handleChange = this.handleChange.bind(this)
-
-		// handle state on input change
 	}
 	componentWillUpdate() {
 		setTimeout(function() {
@@ -36,7 +31,6 @@ export default class Form extends Component {
 			// setTimeout(function() {
 			// 	$('#plane').removeClass('fadeInUp')
 			// }, 3000)
-
 		}, 200)
 		// setTimeout(function() {
 		// 		$('#plane').addClass('animated zoomOutRight')
@@ -53,7 +47,12 @@ export default class Form extends Component {
 
 				if (errorLabel && elem.nodeName.toLowerCase() !== 'button') {
 					if (!elem.validity.valid) {
-						elem.placeholder = 'I feel empty.'
+						if (elem.name.toLowerCase() === 'email') {
+							elem.placeholder = 'i_need@an.email'
+						} else {
+							elem.placeholder = 'I feel empty.'
+						}
+						$('#newsletter-signup-form-button').addClass('animated shake')
 					} else {
 						errorLabel.textContent = ''
 					}
@@ -86,7 +85,7 @@ export default class Form extends Component {
 
 	handleSubmit(event) {
 		event.preventDefault()
-		
+
 		// ?if (this.validate()) {
 		if (this.validate()) {
 			$.ajax({
@@ -98,7 +97,7 @@ export default class Form extends Component {
 				},
 				success: function(data) {
 					$('.get-out').addClass('animated fadeOutUp')
-
+					this.formEl.reset()
 					setTimeout(
 						function() {
 							// $('.get-out-hide').css('visibility', 'hidden')
@@ -109,9 +108,9 @@ export default class Form extends Component {
 				}.bind(this),
 				error: function() {
 					$('#newsletter-signup-form-button').addClass('animated shake')
-					const elem = this.formEl[2]
+					// const elem = this.formEl[2]
 					$('.server-error').css('visibility', 'visible')
-				}.bind(this),
+				},
 			})
 		}
 		this.formEl.reset()
@@ -140,7 +139,6 @@ export default class Form extends Component {
 					<form
 						ref={form => (this.formEl = form)}
 						{...props}
-						className={classNames}
 						noValidate
 						className="get-out"
 						onSubmit={this.handleSubmit}

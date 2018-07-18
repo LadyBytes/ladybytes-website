@@ -1,13 +1,10 @@
-// import React, { Component } from 'react'
-import en from './translations/en.translations.json'
+import React from 'react'
+
+import { withLocalize } from 'react-localize-redux'
 import { renderToStaticMarkup } from 'react-dom/server'
-import { withLocalize, Translate } from 'react-localize-redux'
+import en from './translations/en.translations.json'
 
 import './App.css'
-
-import React from 'react'
-import ReactDOM from 'react-dom'
-// import { Parallax, Spring } from 'react-spring'
 
 import { Footer, Hero, Teacher, Signup } from './components'
 
@@ -78,8 +75,8 @@ export default withLocalize(App)
 // export default withLocalize(App)
 //
 //
-{
-  /*<Parallax ref="parallax" pages={3}>
+
+/*<Parallax ref="parallax" pages={3}>
             <Parallax.Layer offset={-3} speed={-1} > Back to top </Parallax.Layer>
             <Parallax.Layer offset={0} speed={1} />
             <Parallax.Layer offset={1.1} speed={1} />
@@ -102,4 +99,3 @@ export default withLocalize(App)
             </Parallax.Layer>
           </Parallax>
 */
-}

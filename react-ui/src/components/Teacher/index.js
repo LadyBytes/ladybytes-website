@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { Parallax } from 'react-spring'
 import { Translate } from 'react-localize-redux'
+
 import TeacherImage from './teacher.jpeg'
 
 const Teacher = () => (
@@ -21,9 +21,7 @@ const Teacher = () => (
       </p>
     </div>
     <div className="l-box-lrg">
-      {/*<Parallax.Layer offset={-0.4} speed={-0.3} style={{ position: 'unset', marginBottom: '10%' }}>*/}
-        <img className="teacher" src={TeacherImage} alt="Lisa Wagner" />
-      {/*</Parallax.Layer>*/}
+      <img className="teacher" src={TeacherImage} alt="Lisa Wagner" />
     </div>
   </section>
 )

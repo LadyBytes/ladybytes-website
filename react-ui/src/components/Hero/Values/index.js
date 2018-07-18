@@ -6,9 +6,6 @@ import Heart from './heart.svg'
 import React, { Component } from 'react'
 
 export default class Value extends Component {
-  constructor(props) {
-    super(props)
-  }
   createMarkup(icon) {
     return { __html: icon }
   }

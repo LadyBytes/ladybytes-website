@@ -22,12 +22,11 @@ export default class Prompt extends Component {
   }
 
   handleCssChange(event) {
-    console.log(event.target)
     event.preventDefault()
     document.getElementById('playground.ladybytes-color').blur()
     document.getElementById('playground.background-color').blur()
     document.getElementById('playground.values-animation').blur()
-    
+
     console.log(this.state)
 
     $(this.state.element).css(this.state.property, this.state.value)
@@ -38,11 +37,7 @@ export default class Prompt extends Component {
     document.getElementById('playground.ladybytes-color').blur()
     document.getElementById('playground.background-color').blur()
     document.getElementById('playground.values-animation').blur()
-    console.log(event.target)
-    
-    document.getElementsByTagName('input').blur()
 
-    console.log(this.state)
     document.getElementById('values').scrollIntoView()
 
     $(this.state.element).addClass(this.state.value)

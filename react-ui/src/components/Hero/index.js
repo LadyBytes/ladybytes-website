@@ -2,11 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import { Translate } from 'react-localize-redux'
-
 import Value from './Values'
 import { Playground } from '../../components'
-
-
 
 export class Hero extends Component {
   constructor(props) {

@@ -48,6 +48,19 @@ label {
   font-family: var(--gabriela);
 }
 
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  /* border: 1px solid green; */
+  -webkit-text-fill-color: black;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
 a:link {
   color: inherit;
   text-decoration: none;
@@ -185,7 +198,7 @@ section#hero-section #ladybytes #slogan h2 {
 section#hero-section #values {
   grid-area: values;
   display: grid;
-  grid-template: 'skill' 'donation' 'experience'  auto;
+  grid-template: 'skill' 'donation' 'experience' auto;
   justify-items: center;
   margin-bottom: 2em;
 }
@@ -303,7 +316,8 @@ section#hero-section #playground {
 
 section#hero-section #playground div#prompt {
   font-family: var(--ubuntu);
-  padding-left: 1em;
+  /* padding-left: 1em; */
+  padding: 1em;
   -moz-box-shadow: inset -1px -1px 2px #ccc;
   -webkit-box-shadow: inset -1px -1px 2px #ccc;
   box-shadow: inset -1px -1px 2px #ccc;
@@ -317,6 +331,7 @@ section#hero-section #playground div#prompt {
 
 section#hero-section #playground div#prompt .comment {
   color: var(--lightgray);
+  margin-bottom: 0.2em;
 }
 
 section#hero-section #playground div#prompt input {
@@ -332,8 +347,34 @@ section#hero-section #playground div#prompt input {
   border-radius: 5px;
 }
 
+section#hero-section #playground div#prompt input:-webkit-autofill,
+section#hero-section #playground div#prompt input:-webkit-autofill:hover,
+section#hero-section
+  #playground
+  div#prompt
+  input:-webkit-autofill:focus
+  section#hero-section
+  #playground
+  div#prompt
+  textarea:-webkit-autofill,
+section#hero-section
+  #playground
+  div#prompt
+  textarea:-webkit-autofill:hover
+  section#hero-section
+  #playground
+  div#prompt
+  textarea:-webkit-autofill:focus,
+section#hero-section #playground div#prompt select:-webkit-autofill,
+section#hero-section #playground div#prompt select:-webkit-autofill:hover,
+section#hero-section #playground div#prompt select:-webkit-autofill:focus {
+  /* border: 1px solid green; */
+  -webkit-text-fill-color: white;
+}
+
 section#hero-section #playground div#prompt input::placeholder {
   color: white;
+  opacity: 0.3;
 }
 
 section#hero-section #playground div#prompt input::selection {

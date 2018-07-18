@@ -5,8 +5,8 @@ import Responsive from 'react-responsive'
 
 import Prompt from './Prompt'
 
-const Desktop = props => <Responsive {...props} minWidth={'65em'} />
-const Tablet = props => <Responsive {...props} minWidth={'35.6em'} maxWidth={'64em'} />
+
+const TabletAndUp = props => <Responsive {...props} minWidth={'35.6em'} />
 const Mobile = props => <Responsive {...props} maxWidth={'35.5em'} />
 
 export class Playground extends Component {
@@ -38,27 +38,28 @@ export class Playground extends Component {
             {this.props.show ? Playground : () => null}
           </Transition>
         </Mobile>
+
+        <TabletAndUp>
+          <Transition
+            native
+            from={{ opacity: 0, height: '0em', width: '0em' }}
+            enter={{ opacity: 1, height: '30em', width: '35em' }}
+            leave={{ opacity: 0, height: '0em', width: '0' }}
+          >
+            {this.props.show ? Playground : () => null}
+          </Transition>
+        </TabletAndUp>
+{/*
         <Desktop>
           <Transition
             native
             from={{ opacity: 0, height: '0em', width: '0em' }}
-            enter={{ opacity: 1, height: '35em', width: '45em' }}
+            enter={{ opacity: 1, height: '45em', width: '45em' }}
             leave={{ opacity: 0, height: '0em', width: '0' }}
           >
             {this.props.show ? Playground : () => null}
           </Transition>
-        </Desktop>
-
-        <Tablet>
-          <Transition
-            native
-            from={{ opacity: 0, height: '0em', width: '0em' }}
-            enter={{ opacity: 1, height: '25em', width: '35em' }}
-            leave={{ opacity: 0, height: '0em', width: '0' }}
-          >
-            {this.props.show ? Playground : () => null}
-          </Transition>
-        </Tablet>
+        </Desktop>*/}
       </div>
     )
   }

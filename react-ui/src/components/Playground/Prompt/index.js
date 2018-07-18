@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import MediaQuery from 'react-responsive'
 import { Translate } from 'react-localize-redux'
 import $ from 'jquery'
+import Form from './form.js'
 // suggested values
 // error messages if invalid?
 // box animations
@@ -14,22 +15,39 @@ export default class Prompt extends Component {
     super(props)
 
     this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleCssChange = this.handleCssChange.bind(this)
+    this.handleClassChange = this.handleClassChange.bind(this)
   }
 
-  handleSubmit(event) {
+  handleCssChange(event) {
     event.preventDefault()
-    $('#ladybytes').css('color', 'red')
+        console.log(this.state)
+
+    $(this.state.element).css(this.state.property, this.state.value)
   }
 
-  handleChange(event) {
+  handleClassChange(event) {
     event.preventDefault()
-    const target = event.target
-    const value = target.value
-    const name = target.name
+    console.log(this.state)
+    $(this.state.element).addClass(this.state.value)
+    setTimeout(() => {
+      $(this.state.element).removeClass(this.state.value)
+    }, 1000)
+    // setTimeout($(this.state.element).removeClass(this.state.value), 2000)
+  }
 
+  handleChange(event, i) {
+    event.preventDefault()
+    let target = event.target
+    let value = target.value
+    let name = target.name
+
+    let property = target.getAttribute('property')
+    
     this.setState({
-      [name]: value,
+      element: name,
+      property: property,
+      value: value,
     })
   }
 
@@ -37,32 +55,12 @@ export default class Prompt extends Component {
     return (
       <div id="prompt" style={this.props.styles}>
         <p className="comment">
-          <Translate id={`playground.comment`} />
+          <Translate id={`playground.comment1`} />
         </p>
-        <div>
-          <Translate id={`playground.background-color`} />
-          <input
-            id="playground.background-color"
-            name="playground.background-color"
-            type="text"
-            placeholder="yellow"
-            onChange={this.handleChange}
-          />;<br />}
-        </div>
-        <br />
-        <div>
-          <form className="prompt-form" onSubmit={this.handleSubmit}>
-            <Translate id={`playground.ladybytes-color`} />
-            <input
-              id="playground.ladybytes-color"
-              name="playground.ladybytes-color"
-              type="text"
-              placeholder="yellow"
-              onChange={this.handleChange}
-            />;<br />}
-            <button type="submit" hidden />
-          </form>
-        </div>
+        <p className="comment">
+          <Translate id={`playground.comment2`} />
+        </p>
+        <Form handleCssChange={this.handleCssChange} handleClassChange={this.handleClassChange} onChange={this.handleChange} />
       </div>
     )
   }

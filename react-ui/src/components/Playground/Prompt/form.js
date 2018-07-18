@@ -24,6 +24,7 @@ export default class Form extends Component {
             id="playground.ladybytes-color"
             name="#ladybytes"
             property="color"
+            bluronsubmit
             type="text"
             placeholder="yellow"
             autoCapitalize="off"
@@ -37,6 +38,7 @@ export default class Form extends Component {
             <input
               id="playground.background-color"
               name="#teacher-section"
+              bluronsubmit
               property="background-color"
               type="text"
               placeholder="yellow"
@@ -56,6 +58,7 @@ export default class Form extends Component {
               id="playground.values-animation"
               name=".value"
               type="text"
+              bluronsubmit
               placeholder="animated swing"
               autoCapitalize="off"
               onChange={this.change}

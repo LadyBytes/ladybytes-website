@@ -41,13 +41,14 @@ export class Hero extends Component {
         </div>
 
         <div id="values">
-          <Value id="skill-value" delay={250} />
+          
           <Value id="experience-value" icon="?" delay={500} onClick={this.togglePlayground} />
           <Value
             id="donation-value"
             icon="<span class='small-value'>$</span>$<span class='small-value'>$</span>"
             delay={750}
           />
+          <Value id="skill-value" delay={250} />
         </div>
 
         

@@ -15,16 +15,22 @@ export default class Form extends Component {
     this.props.handleClassChange(event)
   }
 
+  shouldBlur = e => {
+    if (e.keyCode === 40) {
+      e.target.blur()
+    }
+  }
+
   render() {
     return (
       <span>
         <form className="prompt-form" onSubmit={this.handleCssChange}>
           <Translate id={`playground.ladybytes-color`} />
           <input
+            onKeyDown={this.shouldBlur}
             id="playground.ladybytes-color"
             name="#ladybytes"
             property="color"
-            bluronsubmit
             type="text"
             placeholder="yellow"
             autoCapitalize="off"
@@ -36,9 +42,9 @@ export default class Form extends Component {
           <div>
             <Translate id={`playground.background-color`} />
             <input
+              onKeyDown={this.shouldBlur}
               id="playground.background-color"
               name="#teacher-section"
-              bluronsubmit
               property="background-color"
               type="text"
               placeholder="yellow"
@@ -55,10 +61,10 @@ export default class Form extends Component {
           <div>
             <Translate id={`playground.values-animation`} />
             <input
+              onKeyDown={this.shouldBlur}
               id="playground.values-animation"
               name=".value"
               type="text"
-              bluronsubmit
               placeholder="animated swing"
               autoCapitalize="off"
               onChange={this.change}

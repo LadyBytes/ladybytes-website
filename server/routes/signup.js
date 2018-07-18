@@ -23,7 +23,7 @@ signup.post('/', urlencode, function(request, response) {
     to: (process.env.ENV = 'production') ? newLadybyte.email : process.env.GMAIL_USER, // list of receivers
     bcc: process.env.GMAIL_USER,
     subject: 'Welcome to LadyBytes!', // Subject line
-    text: `You just signed up for Ladybytes.io. Great call! \n I will reach out to you shortly to get you all caught up. \n\n Have a lovely day. \n Lisa Wagner `,
+    text: `You just signed up for Ladybytes.io - great call! \n I will reach out to you shortly to get you started. \n\n Have a lovely day, \n Lisa Wagner `,
   }
 
   // send mail with defined transport object

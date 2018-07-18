@@ -16,6 +16,16 @@
     }
   },
 
+  "playground": {
+    "comment": [
+      "// Hi there. This is a comment - just a little note for programmers that doesn't affect the code.<br/>// The lines below are code that describes the styling of this website. <br />// Go a head and try to change something."
+    ],
+
+    "background-color": ["#teacher-section {<br/> background-color:"],
+
+    "ladybytes-color": ["#header.lady { <br/>font-color:"]
+  },
+
   "teacher": {
     "who": {
       "headline": ["Who's teaching?"],

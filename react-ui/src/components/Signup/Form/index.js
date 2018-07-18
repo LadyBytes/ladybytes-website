@@ -86,7 +86,7 @@ export default class Form extends Component {
 
 	handleSubmit(event) {
 		event.preventDefault()
-		console.log(this.state.name + 'hallo')
+		
 		// ?if (this.validate()) {
 		if (this.validate()) {
 			$.ajax({

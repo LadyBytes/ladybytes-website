@@ -1,5 +1,5 @@
 // import React, { Component } from 'react'
-import en from './translations/en.json'
+import en from './translations/en.translations.json'
 import { renderToStaticMarkup } from 'react-dom/server'
 import { withLocalize, Translate } from 'react-localize-redux'
 
@@ -28,28 +28,18 @@ class App extends React.Component {
     return (
       <div className="wrapper">
         <div className="main">
-          
-            {/*<Parallax.Layer offset={-3} speed={-1} > Back to top </Parallax.Layer>*/}
-           {/* <Parallax.Layer offset={0} speed={1} />
+          {/*<Parallax.Layer offset={-3} speed={-1} > Back to top </Parallax.Layer>*/}
+          {/* <Parallax.Layer offset={0} speed={1} />
             <Parallax.Layer offset={1.1} speed={1} />
             <Parallax.Layer offset={2.2} speed={1} style={{}} />*/}
 
+          <Hero />
 
-              <Hero/>
+          <Teacher className="teacher-layer" />
 
+          <Signup />
 
-            
-              <Teacher className='teacher-layer'/>
-            
-
-            
-              <Signup />
-            
-
-            
-          
-              <Footer />
-          
+          <Footer />
         </div>
       </div>
     )

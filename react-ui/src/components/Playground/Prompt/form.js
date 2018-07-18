@@ -26,6 +26,7 @@ export default class Form extends Component {
             property="color"
             type="text"
             placeholder="yellow"
+            autocapitalize="off" 
             onChange={this.change}
           />;<br />}
           <button type="submit" hidden />
@@ -39,6 +40,7 @@ export default class Form extends Component {
               property="background-color"
               type="text"
               placeholder="yellow"
+              autocapitalize="off" 
               onChange={this.change}
             />;<br />}
             <button type="submit" hidden />
@@ -55,6 +57,7 @@ export default class Form extends Component {
               name=".value"
               type="text"
               placeholder="animated swing"
+              autocapitalize="off" 
               onChange={this.change}
             />);
             <button type="submit" hidden />

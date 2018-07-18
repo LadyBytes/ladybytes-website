@@ -33,7 +33,7 @@ export default class Prompt extends Component {
     console.log(this.state)
     document.getElementById('values').scrollIntoView()
     
-    $(this.state.element).addClass(this.state.value)
+    $(this.state.element).addClass(this.state.value.toLowerCase())
     setTimeout(() => {
       $(this.state.element).removeClass(this.state.value)
     }, 1000)

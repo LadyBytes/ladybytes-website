@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import MediaQuery from 'react-responsive'
+
+import ReactDOM from 'react-dom'
+
 import { Translate } from 'react-localize-redux'
 import $ from 'jquery'
 import Form from './form.js'
@@ -21,7 +23,7 @@ export default class Prompt extends Component {
 
   handleCssChange(event) {
     event.preventDefault()
-        console.log(this.state)
+    console.log(this.state)
 
     $(this.state.element).css(this.state.property, this.state.value)
   }
@@ -29,6 +31,8 @@ export default class Prompt extends Component {
   handleClassChange(event) {
     event.preventDefault()
     console.log(this.state)
+    document.getElementById('values').scrollIntoView()
+    
     $(this.state.element).addClass(this.state.value)
     setTimeout(() => {
       $(this.state.element).removeClass(this.state.value)
@@ -43,7 +47,7 @@ export default class Prompt extends Component {
     let name = target.name
 
     let property = target.getAttribute('property')
-    
+
     this.setState({
       element: name,
       property: property,
@@ -60,7 +64,11 @@ export default class Prompt extends Component {
         <p className="comment">
           <Translate id={`playground.comment2`} />
         </p>
-        <Form handleCssChange={this.handleCssChange} handleClassChange={this.handleClassChange} onChange={this.handleChange} />
+        <Form
+          handleCssChange={this.handleCssChange}
+          handleClassChange={this.handleClassChange}
+          onChange={this.handleChange}
+        />
       </div>
     )
   }

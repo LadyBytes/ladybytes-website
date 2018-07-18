@@ -31,13 +31,12 @@ export default class Prompt extends Component {
   handleClassChange(event) {
     event.preventDefault()
     // hide keyboard on mobile
-     setTimeout(() => {
-      this._element.focus();
-      this._element.blur();
-    }, 20);
+    setTimeout(() => {
+      document.getElementById('playground.values-animation').blur()
+    }, 20)
     console.log(this.state)
     document.getElementById('values').scrollIntoView()
-    
+
     $(this.state.element).addClass(this.state.value)
     setTimeout(() => {
       $(this.state.element).removeClass(this.state.value)

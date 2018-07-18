@@ -400,6 +400,7 @@ section#teacher-section img.teacher {
 section#newsletter-section {
   min-height: 70vh;
   display: grid;
+  grid-area: newsletter;
 }
 
 #newsletter-section .text {
@@ -475,11 +476,6 @@ section#newsletter-section {
   outline: none;
 }
 
-@media screen and (min-width: 0em) and (max-width: 360px) {
-}
-
-@media screen and (min-width: 80em) {
-}
 @media screen and (min-width: 0em) {
   body {
     font-size: 16px;
@@ -508,7 +504,6 @@ section#newsletter-section {
     align-items: center;
     column-gap: 6em;
     grid-column-gap: 6em;
-    grid-area: newsletter;
   }
 
   #newsletter-section .text {

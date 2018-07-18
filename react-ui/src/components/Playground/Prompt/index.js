@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import MediaQuery from 'react-responsive'
 import { Translate } from 'react-localize-redux'
 import $ from 'jquery'
 // suggested values
@@ -6,6 +7,7 @@ import $ from 'jquery'
 // box animations
 // if it does not look great, just reload!
 // remove playgroung for smaller screens
+// nothing changed, try a value like
 
 export default class Prompt extends Component {
   constructor(props) {
@@ -19,10 +21,11 @@ export default class Prompt extends Component {
     event.preventDefault()
     $('#ladybytes').css('color', 'red')
   }
+
   handleChange(event) {
     event.preventDefault()
     const target = event.target
-    const value = target.type === 'checkbox' ? target.checked : target.value
+    const value = target.value
     const name = target.name
 
     this.setState({

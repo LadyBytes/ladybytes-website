@@ -18,7 +18,7 @@
 
   "playground": {
     "comment": [
-      "// Hi there. This is a comment - just a little note for programmers that doesn't affect the code.<br/>// The lines below are code that describes the styling of this website. <br />// Go a head and try to change something."
+      "/* Hi there. This is a comment - just a little note for programmers that doesn't affect the code.<br/> The lines below are code that describes the styling of this website. <br /> Go ahead and change something! */"
     ],
 
     "background-color": ["#teacher-section {<br/> background-color:"],
@@ -43,7 +43,7 @@
 
   "signup": {
     "body": [
-      "Leave your email and I'll reach out! We have weekly group sessions at <a target='_blank' href='https://goo.gl/maps/SC7MmKwxifL2'> Cafe Beit in Williamsburg</a>, but I also do private lessons for special people."
+      "Leave your email and I'll reach out! We have weekly group sessions at <a target='_blank' href='https:goo.gl/maps/SC7MmKwxifL2'> Cafe Beit in Williamsburg</a>, but I also do private lessons for special people."
     ]
   },
 

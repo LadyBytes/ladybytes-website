@@ -20,7 +20,7 @@ export class Playground extends Component {
     const Playground = styles => (
       <animated.div style={styles}>
         {' '}
-        <Spring from={{ opacity: 0 }} to={{ opacity: 1 }} delay={500}>
+        <Spring from={{ opacity: 0 }} to={{ opacity: 1 }} delay={800}>
           {styles => <Prompt style={styles} />}
         </Spring>
       </animated.div>

@@ -27,7 +27,7 @@ export class Hero extends Component {
             <span className="lady">
               L<span className="ady">ady</span>
             </span>
-            <span className="bytes">
+            <span id="bytes" className="bytes">
               B<span className="ytes">ytes</span>
             </span>
           </span>

@@ -26,8 +26,9 @@ export default class Prompt extends Component {
 
   handleCssChange(event) {
     event.preventDefault()
-    $( "input" ).blur()
-    
+    $('input').blur()
+
+    document.getElementById(event.target.name).scrollIntoView({ block: 'end', behavior: 'smooth' })
     console.log(this.state)
 
     $(this.state.element).css(this.state.property, this.state.value)
@@ -35,8 +36,8 @@ export default class Prompt extends Component {
 
   handleClassChange(event) {
     event.preventDefault()
-    $( "input" ).blur()
-    document.getElementById('values').scrollIntoView()
+    $('input').blur()
+    document.getElementById(event.target.name).scrollIntoView({ block: 'end', behavior: 'smooth' })
 
     $(this.state.element).addClass(this.state.value)
     setTimeout(() => {

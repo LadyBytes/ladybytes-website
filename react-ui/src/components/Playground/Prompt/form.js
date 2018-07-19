@@ -21,6 +21,7 @@ export default class Form extends Component {
         <form className="prompt-form" onSubmit={this.handleCssChange}>
           <Translate id={`playground.ladybytes-color`} />
           <input
+            list="bytes-data"
             id="playground.ladybytes-color"
             name="#ladybytes"
             property="color"
@@ -29,6 +30,15 @@ export default class Form extends Component {
             autoCapitalize="off"
             onChange={this.change}
           />;<br />}
+          <datalist id="bytes-data">
+            <option value="hotpink" />
+            <option value="gray" />
+            <option value="lightseagreen" />
+            <option value="aquamarine" />
+            <option value="#00edd9" />
+            <option value="#6e2c66" />
+            <option value="RGB(70, 130, 180)" />
+          </datalist>
           <button type="submit" hidden />
         </form>
         <form className="prompt-form" onSubmit={this.handleCssChange}>
@@ -41,8 +51,18 @@ export default class Form extends Component {
               type="text"
               placeholder="yellow"
               autoCapitalize="off"
+              list="teacher-data"
               onChange={this.change}
             />;<br />}
+            <datalist id="teacher-data">
+              <option value="hotpink" />
+
+              <option value="orange" />
+              <option value="#00edd9" />
+              <option value="#6e2c66" />
+              <option value="rgb(152, 251, 152)" />
+              <option value="rgba(139, 0, 139, 0.4)" />
+            </datalist>
             <button type="submit" hidden />
           </div>
         </form>
@@ -56,11 +76,20 @@ export default class Form extends Component {
               id="playground.values-animation"
               name=".value"
               type="text"
+              list="animation-data"
               placeholder="animated swing"
               autoCapitalize="off"
               onChange={this.change}
             />);
-            <button type="submit" hidden />
+            <datalist id="animation-data">
+              <option value="animated swing" />
+              <option value="animated tada" />
+              <option value="animated bounce" />
+              <option value="animated lightSpeedOut" />
+              <option value="animated zoomOut" />
+              <option value="animated slideOutUp" />)}
+            </datalist>
+            <button type="submit fadeOutLeft" hidden />
           </div>
         </form>
       </span>

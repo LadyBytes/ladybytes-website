@@ -11,6 +11,9 @@ import Form from './form.js'
 // if it does not look great, just reload!
 // remove playgroung for smaller screens
 // nothing changed, try a value like
+// webpack
+// better scrolling
+// dropdown selection for prompt forms
 
 export default class Prompt extends Component {
   constructor(props) {
@@ -23,10 +26,8 @@ export default class Prompt extends Component {
 
   handleCssChange(event) {
     event.preventDefault()
-    document.getElementById('playground.ladybytes-color').blur()
-    document.getElementById('playground.background-color').blur()
-    document.getElementById('playground.values-animation').blur()
-
+    $( "input" ).blur()
+    
     console.log(this.state)
 
     $(this.state.element).css(this.state.property, this.state.value)
@@ -34,10 +35,7 @@ export default class Prompt extends Component {
 
   handleClassChange(event) {
     event.preventDefault()
-    document.getElementById('playground.ladybytes-color').blur()
-    document.getElementById('playground.background-color').blur()
-    document.getElementById('playground.values-animation').blur()
-
+    $( "input" ).blur()
     document.getElementById('values').scrollIntoView()
 
     $(this.state.element).addClass(this.state.value)

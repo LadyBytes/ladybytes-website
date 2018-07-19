@@ -347,6 +347,10 @@ section#hero-section #playground div#prompt input {
   border-radius: 5px;
 }
 
+section#hero-section #playground div#prompt input::-webkit-calendar-picker-indicator {
+  background-color: transparent;
+}
+
 section#hero-section #playground div#prompt input:-webkit-autofill,
 section#hero-section #playground div#prompt input:-webkit-autofill:hover,
 section#hero-section

@@ -6,11 +6,8 @@ const CompressionPlugin = require('compression-webpack-plugin')
 
 // new CompressionPlugin(...options)
 // const CleanWebpackPlugin = require('clean-webpack-plugin')
-// const bundleAnalyzerPlugin = new BundleAnalyzerPlugin()
-
 
 const outputDirectory = 'dist'
-
 
 const compressionPlugin = new CompressionPlugin({
   asset: '[path].gz[query]',

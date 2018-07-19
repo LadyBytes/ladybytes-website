@@ -15,15 +15,12 @@ export default class Form extends Component {
     this.props.handleClassChange(event)
   }
 
-
-
   render() {
     return (
       <span>
         <form className="prompt-form" onSubmit={this.handleCssChange}>
           <Translate id={`playground.ladybytes-color`} />
           <input
-            
             id="playground.ladybytes-color"
             name="#ladybytes"
             property="color"
@@ -38,7 +35,6 @@ export default class Form extends Component {
           <div>
             <Translate id={`playground.background-color`} />
             <input
-              
               id="playground.background-color"
               name="#teacher-section"
               property="background-color"
@@ -57,7 +53,6 @@ export default class Form extends Component {
           <div>
             <Translate id={`playground.values-animation`} />
             <input
-              
               id="playground.values-animation"
               name=".value"
               type="text"

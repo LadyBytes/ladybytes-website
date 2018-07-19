@@ -12,6 +12,10 @@ app.use(helmet())
 app.use(compression());
 
 
+
+app.get('/.well-known/acme-challenge/K_2RjEaeymUHc7iTWe-RdAFQjPLNdCdIuI1B2fnOpyk', (req, res) => {
+  res.send('K_2RjEaeymUHc7iTWe-RdAFQjPLNdCdIuI1B2fnOpyk.8QUstrwiUKpP7oZH0ycw6DC0Y1dZwoHI7v5syvojMU8')
+})
 // Priority serve any static files.
 app.use(express.static(path.resolve(__dirname, '../react-ui/dist')))
 app.use('/', routes)

@@ -33,7 +33,7 @@ signup.post('/', urlencode, function(request, response) {
     if (error) {
       return console.log(error)
     }
-    console.log('Message sent: %s', info.id)
+    console.log('Message sent: %s', info.messageId)
   })
 })
 

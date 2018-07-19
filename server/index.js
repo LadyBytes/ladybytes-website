@@ -9,12 +9,12 @@ var app = express()
 app.use(helmet())
 
 // Priority serve any static files.
-app.use(express.static(path.resolve(__dirname, '../react-ui/build')))
+app.use(express.static(path.resolve(__dirname, '../react-ui/dist')))
 app.use('/', routes)
 
 // All remaining requests return the React app, so it can handle routing.
 app.get('*', function(request, response) {
-  response.sendFile(path.resolve(__dirname, '../react-ui/build', 'index.html'))
+  response.sendFile(path.resolve(__dirname, '../react-ui/dist', 'index.html'))
 })
 
 // Turn on that server!

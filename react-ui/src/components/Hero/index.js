@@ -3,20 +3,23 @@ import PropTypes from 'prop-types'
 
 import { Translate } from 'react-localize-redux'
 import Value from './Values'
-import { Playground } from '../../components'
+import Playground from './Playground'
 
 export class Hero extends Component {
   constructor(props) {
     super(props)
     // Don't call this.setState() here!
     this.state = { showPlayground: false }
-    this.togglePlayground = this.togglePlayground.bind(this);
+    this.togglePlayground = this.togglePlayground.bind(this)
   }
 
   togglePlayground() {
     this.setState({
       showPlayground: !this.state.showPlayground,
     })
+    setTimeout(() => {
+      this.state.showPlayground && document.getElementById('playground').scrollIntoView({ block: 'end', behavior: 'smooth' })
+    }, 100);
   }
 
   render() {
@@ -33,7 +36,7 @@ export class Hero extends Component {
           </span>
 
           {/*<div id="slogan" onClick={() => this.props.parallax.scrollTo(2.85)}>*/}
-          <div id="slogan" >
+          <div id="slogan">
             <h2>
               <Translate id="slogan" />
             </h2>
@@ -41,7 +44,6 @@ export class Hero extends Component {
         </div>
 
         <div id="values">
-          
           <Value id="experience-value" icon="?" delay={500} onClick={this.togglePlayground} />
           <Value
             id="donation-value"
@@ -51,8 +53,7 @@ export class Hero extends Component {
           <Value id="skill-value" delay={250} />
         </div>
 
-        
-        {<Playground show={this.state.showPlayground}/>}
+        {<Playground show={this.state.showPlayground} />}
       </section>
     )
   }

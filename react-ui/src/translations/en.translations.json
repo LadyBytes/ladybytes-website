@@ -18,7 +18,7 @@
 
   "playground": {
     "comment1": [
-      "/* Hi there. This is a comment - just a little note for programmers that doesn't affect the code.<br/> The lines below are code that describes the styling of this website. <br /> Go ahead, change something and confirm by pressing enter! */"
+      "/* Hi there. This is a comment - just a little note that doesn't affect the code.<br/> The lines below are code that describes the styling of this website. <br /> Go ahead, change something and confirm by pressing enter! */"
     ],
 
 "comment2": [
@@ -28,9 +28,10 @@
       "// How about some animation? <br/>// Add 'animated bounce' or 'animated fadeOutLeft' <br/> // For more inspiration, check out  <a target='_blank' href='https://daneden.github.io/animate.css/'> Animate.css</a>."
     ],
     "background-color": ["#teacher-section {<br/> background-color:"],
-
     "ladybytes-color": ["#header.bytes { <br/>font-color:"],
-    "values-animation": ["$(.value).addClass( "]
+    "values-animation": ["$(.value).addClass( "],
+    "property-end":[";<br />}"],
+    "class-end":[");"]
   },
 
   "teacher": {

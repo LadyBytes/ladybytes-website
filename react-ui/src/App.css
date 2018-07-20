@@ -96,7 +96,7 @@ p {
 }
 
 .main {
-  overflow-x: auto;
+  /* overflow-x: auto; */
   display: grid;
   grid-template-rows: repeat(5, auto);
   grid-row-gap: 2em;

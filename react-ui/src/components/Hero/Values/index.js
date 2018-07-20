@@ -19,7 +19,7 @@ export default class Value extends Component {
     return (
       <Spring from={{ opacity: 0 }} to={{ opacity: 1 }} delay={this.props.delay}>
         {styles => (
-          <div id={id} className=" value" style={styles}>
+          <div id={id} className="value " style={styles}>
             <div className="value-text">
               <h2 aria-hidden="true">
                 {this.props.icon ? (

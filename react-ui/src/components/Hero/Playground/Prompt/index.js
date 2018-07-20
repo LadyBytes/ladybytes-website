@@ -45,7 +45,7 @@ export default class Prompt extends Component {
     document.getElementById('values').scrollIntoView({ block: 'end', behavior: 'smooth' })
     $('.' + this.state.element).addClass(this.state.value)
     setTimeout(() => {
-      $(this.state.element).removeClass(this.state.value)
+      $('.' + this.state.element).removeClass(this.state.value)
     }, 1000)
   }
 

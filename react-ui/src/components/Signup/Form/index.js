@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import $ from 'jquery'
-import './form.css'
-import './plane.css'
+
 // import Plane from './paper-plane.svg'
 
 export default class Form extends Component {
@@ -24,17 +23,8 @@ export default class Form extends Component {
 			$('#thanks')
 				.addClass('animated jackInTheBox')
 				.animate({ opacity: 1 }, 400)
-			// $('#plane')
-			// 	.addClass('animated fadeInUp')
-			// 	.animate({ opacity: 1 }, 2000)
-
-			// setTimeout(function() {
-			// 	$('#plane').removeClass('fadeInUp')
-			// }, 3000)
 		}, 200)
-		// setTimeout(function() {
-		// 		$('#plane').addClass('animated zoomOutRight')
-		// 	}, 3000)
+
 	}
 
 	validate = () => {

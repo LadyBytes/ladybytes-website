@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import $ from 'jquery'
 
-// import Plane from './paper-plane.svg'
-
 export default class Form extends Component {
 	state = {
 		isValidated: false,
@@ -13,18 +11,8 @@ export default class Form extends Component {
 		this.state = {
 			success: false,
 		}
-
-		// This binding is necessary to make `this` work in the callback
 		this.handleSubmit = this.handleSubmit.bind(this)
 		this.handleChange = this.handleChange.bind(this)
-	}
-	componentWillUpdate() {
-		setTimeout(function() {
-			$('#thanks')
-				.addClass('animated jackInTheBox')
-				.animate({ opacity: 1 }, 400)
-		}, 200)
-
 	}
 
 	validate = () => {
@@ -98,7 +86,7 @@ export default class Form extends Component {
 				}.bind(this),
 				error: function() {
 					$('#newsletter-signup-form-button').addClass('animated shake')
-					// const elem = this.formEl[2]
+
 					$('.server-error').css('visibility', 'visible')
 				},
 			})
@@ -173,12 +161,7 @@ export default class Form extends Component {
 		} else {
 			return (
 				<div id="newsletter-signup-form">
-					<div className="plane-and-simple">
-						{/*<div id="plane">
-							<img src={Plane} alt="email paper-plane icon" />
-						</div>*/}
-						<div id="thanks">Thanks, {this.state.name}!</div>
-					</div>
+					<div id="thanks">Thanks, {this.state.name}!</div>
 				</div>
 			)
 		}

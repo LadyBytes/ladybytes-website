@@ -1,10 +1,12 @@
 var signup = require('express').Router()
 var bodyParser = require('body-parser')
-var urlencode = bodyParser.urlencoded({ extended: false })
+var urlencode = bodyParser.json()
 var client = require('./db/client.js')
 var transporter = require('./mailer/mailer.js')
 
 signup.post('/', urlencode, function(request, response) {
+  console.log(request.body)
+  console.log(request)
   var newLadybyte = request.body
   var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
   if (!newLadybyte.email || !newLadybyte.name || !re.test(newLadybyte.email.toLowerCase())) {

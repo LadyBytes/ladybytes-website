@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import $ from 'jquery'
+import axios from 'axios'
 
 export default class Form extends Component {
 	state = {
@@ -64,16 +65,14 @@ export default class Form extends Component {
 	handleSubmit(event) {
 		event.preventDefault()
 
-		// ?if (this.validate()) {
 		if (this.validate()) {
-			$.ajax({
-				type: 'POST',
-				url: '/api/signup',
-				data: {
+			axios
+				.post('/api/signup', {
 					name: this.state.name,
 					email: this.state.email,
-				},
-				success: function(data) {
+				})
+				.then(res => {
+					console.log(res)
 					$('.get-out').addClass('animated fadeOutUp')
 					this.formEl.reset()
 					setTimeout(
@@ -83,13 +82,13 @@ export default class Form extends Component {
 						}.bind(this),
 						1000
 					)
-				}.bind(this),
-				error: function() {
+				})
+
+				.catch(error => {
 					$('#newsletter-signup-form-button').addClass('animated shake')
 
 					$('.server-error').css('visibility', 'visible')
-				},
-			})
+				})
 		}
 		this.formEl.reset()
 		this.setState({ isValidated: true })

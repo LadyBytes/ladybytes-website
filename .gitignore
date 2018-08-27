@@ -13,3 +13,5 @@ docker-compose.yml
 
 
 secrets.txt
+
+react-ui/dist/*

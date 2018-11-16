@@ -17,7 +17,14 @@
   --lato: 'Lato', sans-serif;
   --open: 'Open Sans';
 }
-
+svg {
+  position: fixed;
+  path {
+    fill: none;
+    stroke: palevioletred;
+    stroke-width: 3;
+  }
+}
 html,
 body {
   width: 100%;
@@ -338,14 +345,6 @@ section#hero-section #playground div#prompt .comment {
 section#hero-section #playground div#prompt input {
   font-family: var(--ubuntu);
   font-size: 1em;
-  background-color: transparent;
-  cursor: text;
-  color: white;
-  margin-left: 0.7em;
-  border: none;
-  padding: 0.4em 0.6em;
-  box-shadow: inset -1px -1px 2px #ccc;
-  border-radius: 5px;
 }
 
 section#hero-section #playground div#prompt input::-webkit-calendar-picker-indicator {
@@ -465,7 +464,7 @@ section#newsletter-section {
   margin-bottom: 1em;
 }
 
-#newsletter-signup-form input.text-input {
+#newsletter-signup-form input.text-input, textarea {
   font-size: 0.8em;
   line-height: unset;
   color: var(--darkgray) !important;
@@ -479,7 +478,8 @@ section#newsletter-section {
 }
 
 #newsletter-signup-form input.text-input:active,
-#newsletter-signup-form input.text-input:focus {
+#newsletter-signup-form input.text-input:focus,#newsletter-signup-form textarea:active,
+#newsletter-signup-form textarea:focus {
   box-shadow: inset 0 0 1em rgba(253, 194, 45, 0.5), 0 0 1em rgba(253, 194, 45, 0.5);
   border: rgba(253, 194, 45, 0.8) solid 1px;
   outline: none;
@@ -521,7 +521,7 @@ section#newsletter-section {
   outline: none;
 }
 
-section#newsletter-section #thanks{
+section#newsletter-section #thanks {
   text-align: center;
   font-size: 1.3em;
   font-family: var(--gabriela);

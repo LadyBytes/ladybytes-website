@@ -117,7 +117,6 @@ export default class Form extends Component {
               {...props}
               noValidate
               className="get-out"
-              // onSubmit={this.handleSubmit}
               method="POST"
               action="https://formspree.io/lisa@ladybytes.io"
             >

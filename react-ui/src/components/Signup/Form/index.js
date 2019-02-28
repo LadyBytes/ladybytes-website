@@ -66,9 +66,7 @@ export default class Form extends Component {
     event.preventDefault()
 
     if (this.validate()) {
-      this.submit
-      req.open('POST', 'https://formspree.io/lisa@ladybytes.io')
-
+      
       axios
         .post('https://formspree.io/lisa@ladybytes.io', {
           name: this.state.name,

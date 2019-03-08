@@ -1,65 +1,60 @@
 {
-  "slogan": ["A women*-only coding class."],
-
-  "values": {
-    "skill-value": {
-      "slogan": ["Skills that last"],
-      "body": ["We'll design, build and host a website you get to keep.<br/>I promise they won't all look the same."]
-    },
-    "experience-value": {
-      "slogan": ["No experience needed"],
-      "body": ["Coding can feel intimidating - but as long as you know how to copy&paste, you'll do great. "]
-    },
-    "donation-value": {
-      "slogan": ["Donation based"],
-      "body": ["Learning can be very expensive. Here, no one will know or care if you pay $10 or $100."]
-    }
-  },
-
-  "playground": {
-    "comment1": [
-      "/* Hi there. This is a comment - just a little note that doesn't affect the code.<br/> The lines below are code that describes the styling of this website. <br /> Go ahead, change something and confirm by pressing enter! */"
-    ],
-
-"comment2": [
-      "// Let's start with some colors."
-    ],
-"comment3": [
-      "// How about some animation? <br/>// Add 'animated bounce' or 'animated fadeOutLeft' <br/> // For more inspiration, check out  <a target='_blank' href='https://daneden.github.io/animate.css/'> Animate.css</a>."
-    ],
-    "background-color": ["#teacher-section {<br/> background-color:"],
-    "ladybytes-color": ["#header.bytes { <br/>font-color:"],
-    "values-animation": ["$(.value).addClass( "],
-    "property-end":[";<br />}"],
-    "class-end":[");"]
-  },
-
-  "teacher": {
-    "who": {
-      "headline": ["Who's teaching?"],
-      "body": [
-        "I'm Lisa. I have a degree in Computer Science and have been working as a Developer and IT Project Manager for 5 years. I taught coding as a teaching assistant and am excited to pick it up again.<br/><br/> It's freaking hard to be a woman in this field, but there's power in numbers. My plan is to increase these numbers."
-      ]
-    },
-    "free": {
-      "headline": ["Why is it free-ish?"],
-      "body": [
-        " Everyone benefits from having a basic understanding of coding - and everyone should be able to afford that. At the end of each class, just throw in however much you can or want to. Think Yoga To The People with less sweat."
-      ]
-    }
-  },
-
-  "signup": {
-    "body": [
-      "Leave your email and I'll reach out! We have weekly group sessions at <a target='_blank' href='https:goo.gl/maps/SC7MmKwxifL2'> Cafe Beit in Williamsburg</a>, but I also do private lessons for special people."
-    ]
-  },
-
-  "footer": {
-    "body": ["* if you identify as a woman, you're in."]
-  },
-
-  "cta": {
-    "value": ["<br/>Try it out right here."]
-  }
+	"slogan": ["A women*-only coding class."],
+	"values": {
+		"skill-value": {
+			"slogan": ["Skills that last"],
+			"body": [
+				"We’ll design, build, and host a website that’s all yours - front to back. Completely unique and made entirely by you. By the end of the class, you’ll be able to create a basic but impressive website for any idea, and you’ll have the tools and vocabulary to continue your coding education, easy peasy. "
+			]
+		},
+		"experience-value": {
+			"slogan": ["No experience needed"],
+			"body": [
+				"Learning to code can feel intimidating, but we’ll start from the beginning. If you can copy&paste, you can take this class."
+			]
+		},
+		"donation-value": {
+			"slogan": ["Donation based"],
+			"body": ["We’re not here to break the bank - pay whatever you’d like after each session, no one will know or care. "]
+		}
+	},
+	"playground": {
+		"comment1": [
+			"/* Hi there. This is a comment - just a little note that doesn't affect the code.<br/> The lines below are code that describes the styling of this website. <br /> Go ahead, change something and confirm by pressing enter! */"
+		],
+		"comment2": ["// Let's start with some colors."],
+		"comment3": [
+			"// How about some animation? <br/>// Add 'animated bounce' or 'animated fadeOutLeft' <br/> // For more inspiration, check out  <a target='_blank' href='https://daneden.github.io/animate.css/'> Animate.css</a>."
+		],
+		"background-color": ["#teacher-section {<br/> background-color:"],
+		"ladybytes-color": ["#header.bytes { <br/>font-color:"],
+		"values-animation": ["$(.value).addClass( "],
+		"property-end": [";<br />}"],
+		"class-end": [");"]
+	},
+	"teacher": {
+		"who": {
+			"headline": ["Who's teaching?"],
+			"body": [
+				"I’m Lisa. I’m nice and I’m not scary. I have a degree in Computer Science and have been working as a Developer and IT Project Manager for 5 years. My most recent gig is with Memorial Sloan Kettering Cancer Center developing code to support cancer researchers. I taught coding as a teaching assistant and am excited to pick it up again. <br/> I have first hand experience in this male-dominated field. It’s pretty tough, but there is power in numbers. Let’s increase those numbers."
+			]
+		},
+		"free": {
+			"headline": ["What's the catch?"],
+			"body": [
+				"No catch! I’m not in it for the money. I teach because I believe in well-rounded and skilled women. Everyone can benefit from a basic understanding of coding, and everyone should be able to afford it."
+			]
+		}
+	},
+	"signup": {
+		"body": [
+			"Leave me your email and I’ll get back to you, pronto. We have weekly meetings at Cafe Beit in Williamsburg, but I also do private lessons for special people. Drop a message if you have any questions or requests. I look forward to hearing from you."
+		]
+	},
+	"footer": {
+		"body": ["* if you identify as a woman, you're in."]
+	},
+	"cta": {
+		"value": ["<br/>Try it out right here."]
+	}
 }

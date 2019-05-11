@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 // import { Translate } from 'react-localize-redux'
-import { Transition, Spring, animated } from 'react-spring'
+import { Spring, Transition, animated } from 'react-spring/renderprops'
 import Responsive from 'react-responsive'
 
 import Prompt from './Prompt'

@@ -1,6 +1,5 @@
 import { Translate } from 'react-localize-redux'
-import { Spring } from 'react-spring'
-
+import { Spring } from 'react-spring/renderprops'
 import Heart from './heart.svg'
 
 import React, { Component } from 'react'

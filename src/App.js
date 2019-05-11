@@ -30,7 +30,7 @@ class App extends React.Component {
           <title>LadyBytes Coding Classes</title>
           <meta
             name="description"
-            content="earning to code can feel intimidating, but we’ll start from the beginning. If you can copy&paste, you can take this class."
+            content="Learning to code can feel intimidating, but we’ll start from the beginning. If you can copy&paste, you can take this class."
           />
         </Helmet>
         <div className="wrapper">

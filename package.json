@@ -19,6 +19,7 @@
     "express": "^4.16.4",
     "helmet": "^3.15.1",
     "node-mailer": "^0.1.1",
+    "react-helmet": "^5.2.1",
     "redis": "^2.8.0"
   },
   "keywords": [

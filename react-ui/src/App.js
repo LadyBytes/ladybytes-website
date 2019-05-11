@@ -1,43 +1,52 @@
-import React from 'react'
+import React from "react";
+import {Helmet} from 'react-helmet'
 
-import { withLocalize } from 'react-localize-redux'
-import { renderToStaticMarkup } from 'react-dom/server'
-import en from './translations/en.translations.json'
+import { withLocalize } from "react-localize-redux";
+import { renderToStaticMarkup } from "react-dom/server";
+import en from "./translations/en.translations.json";
 
-import './App.css'
+import "./App.css";
 
-import { Footer, Hero, Teacher, Signup } from './components'
+import { Footer, Hero, Teacher, Signup } from "./components";
 
 class App extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.props.initialize({
-      languages: [{ name: 'English', code: 'en' }],
+      languages: [{ name: "English", code: "en" }],
       translation: en,
       options: {
         renderToStaticMarkup,
-        renderInnerHtml: true,
-      },
-    })
+        renderInnerHtml: true
+      }
+    });
   }
 
   render() {
     return (
-      <div className="wrapper">
-        <div className="main">
+      <div>
+        {" "}
+        <Helmet>
+          <title>LadyBytes Coding Classes</title>
+          <meta
+            name="description"
+            content="earning to code can feel intimidating, but we’ll start from the beginning. If you can copy&paste, you can take this class."
+          />
+        </Helmet>
+        <div className="wrapper">
+          <div className="main">
+            <Hero />
 
-          <Hero />
+            <Teacher className="teacher-layer" />
 
-          <Teacher className="teacher-layer" />
+            <Signup />
 
-          <Signup />
-
-          <Footer />
+            <Footer />
+          </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default withLocalize(App)
-
+export default withLocalize(App);
